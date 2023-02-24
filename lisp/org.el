@@ -25,9 +25,21 @@
 
   (octo/make-keybinder "n" "org" octo/keybinder-toplevel)
   (octo/keybinder-org
-    "i" '(org-roam-node-insert :which-key "Insert link to node")
-    "n" '(org-roam-node-find :which-key "Find or create node")
-    "r" '(org-roam-buffer-toggle :which-key "Toggle roam buffer"))
+   "t" '(org-todo :which-key "Cycle TODO")
+   "i" '(org-roam-node-insert :which-key "Insert link to node")
+   "n" '(org-roam-node-find :which-key "Find or create node")
+   "r" '(org-roam-buffer-toggle :which-key "Toggle roam buffer"))
 
   (org-roam-db-autosync-mode)
+  )
+
+(use-package org-roam-ui
+  :ensure t
+  :config
+  (setq org-roam-ui-sync-theme t
+        org-roam-ui-follow t
+        org-roam-ui-update-on-save t
+        org-roam-ui-open-on-start t)
+  (octo/keybinder-org
+    "u" '(org-roam-ui-mode :which-key "Show graph in browser"))
   )
