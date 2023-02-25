@@ -8,6 +8,7 @@
 (global-display-line-numbers-mode 1)
 (size-indication-mode 1)
 (setq inhibit-startup-screen t)
+(fset 'yes-or-no-p 'y-or-n-p) 
 
 (global-prettify-symbols-mode t)
 
@@ -32,6 +33,7 @@
 (load "~/.emacs.d/lisp/keybinds.el")
 (load "~/.emacs.d/lisp/helm.el")
 (load "~/.emacs.d/lisp/org.el")
+(load "~/.emacs.d/lisp/magit.el")
 
 ;; Autocomplete
 (use-package company)
@@ -47,7 +49,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(org-roam-ui org-roam helm company which-key use-package general evil)))
+   '(org-evil evil-collection magit org-roam-ui org-roam helm company which-key use-package general evil)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

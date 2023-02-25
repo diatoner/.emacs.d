@@ -3,3 +3,5 @@
 elpa/
 org-roam.db
 recentf
+server/ 
+transient/ 

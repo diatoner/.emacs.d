@@ -7,7 +7,7 @@
    ";" 'evil-ex
    ":" 'evil-repeat-find-char)
   (general-create-definer octo/keybinder-toplevel
-    :keymaps '(normal visual emacs)
+    :keymaps '(normal visual emacs magit)
     :prefix "SPC"
     :non-normal-prefix "M-SPC")
   (defmacro octo/make-keybinder (infix-key name parent)
