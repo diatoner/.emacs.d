@@ -10,6 +10,7 @@
     :keymaps '(normal visual emacs magit)
     :prefix "SPC"
     :non-normal-prefix "M-SPC")
+  (octo/keybinder-toplevel "d" 'dired)
   (defmacro octo/make-keybinder (infix-key name parent)
     `(general-create-definer
        ,(intern (concat "octo/keybinder-" name))

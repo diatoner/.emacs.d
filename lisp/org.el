@@ -1,6 +1,7 @@
 ;; org-roam
 ;; to be loaded after keybinds.el
 (use-package org-roam
+  :after org
   :ensure t
   :init
   (setq org-startup-indented t)
@@ -25,6 +26,7 @@
 
   (octo/make-keybinder "n" "org" octo/keybinder-toplevel)
   (octo/keybinder-org
+   "l" '(org-insert-link :which-key "Insert link")
    "t" '(org-todo :which-key "Cycle TODO")
    "i" '(org-roam-node-insert :which-key "Insert link to node")
    "n" '(org-roam-node-find :which-key "Find or create node")
@@ -34,6 +36,7 @@
   )
 
 (use-package org-roam-ui
+  :after org-roam
   :ensure t
   :config
   (setq org-roam-ui-sync-theme t
