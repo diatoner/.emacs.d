@@ -31,7 +31,7 @@
     "b" 'switch-to-buffer)
   (octo/make-keybinder "q" "quit" octo/keybinder-toplevel)
   (octo/keybinder-quit
-    "q" 'quit)
+    "q" 'kill-emacs)
   (octo/make-keybinder "m" "local" octo/keybinder-toplevel)
   (octo/keybinder-local
     :states '(normal visual emacs)

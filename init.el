@@ -5,7 +5,9 @@
 
 (setq-default tab-width 2 indent-tabs-mode nil)
 
+(setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode 1)
+
 (size-indication-mode 1)
 (setq inhibit-startup-screen t)
 (fset 'yes-or-no-p 'y-or-n-p) 

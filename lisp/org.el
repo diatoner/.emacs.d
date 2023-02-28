@@ -24,6 +24,10 @@
    :states '(normal insert)
    :keymaps 'org-mode-map "RET" 'org-return)
 
+  (general-define-key
+   :states '(normal insert)
+   :keymaps 'org-mode-map "TAB" 'org-cycle)
+
   (octo/make-keybinder "n" "org" octo/keybinder-toplevel)
   (octo/keybinder-org
    "l" '(org-insert-link :which-key "Insert link")
@@ -32,8 +36,7 @@
    "n" '(org-roam-node-find :which-key "Find or create node")
    "r" '(org-roam-buffer-toggle :which-key "Toggle roam buffer"))
 
-  (org-roam-db-autosync-mode)
-  )
+  (org-roam-db-autosync-mode))
 
 (use-package org-roam-ui
   :after org-roam
