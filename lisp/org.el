@@ -1,3 +1,36 @@
+;; org
+(use-package org
+  :ensure nil
+  :config
+  (add-hook 'org-mode-hook (lambda nil
+          (auto-fill-mode 1)
+          (set-fill-column 78))))
+
+;; org-publish
+(use-package ox-publish
+  :after org
+  :ensure nil
+  :init
+  (setq org-publish-project-alist '(("blog"
+         :base-directory "~/repos/blog/src/"
+         :recursive t
+         :publishing-function org-html-publish-to-html
+         :publishing-directory "~/repos/blog/dist"
+
+         :section-numbers nil
+         :with-toc nil
+         :with-author nil
+         :with-creator nil
+
+         :html-doctype ""
+         :html-xml-declaration ""
+
+         :html-content-class "content"
+         :html-indent t
+
+         :html-preamble nil
+         :html-postamble nil ))))
+
 ;; org-roam
 ;; to be loaded after keybinds.el
 (use-package org-roam
