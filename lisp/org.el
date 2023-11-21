@@ -11,25 +11,36 @@
   :after org
   :ensure nil
   :init
-  (setq org-publish-project-alist '(("blog"
-         :base-directory "~/repos/blog/src/"
-         :recursive t
-         :publishing-function org-html-publish-to-html
-         :publishing-directory "~/repos/blog/dist"
+  (setq
+   org-publish-project-alist
+   '(
+     ("blog-static"
+      :base-directory "~/repos/blog/src/"
+      :base-extension "png\\|jpg\\|gif\\|svg\\|otf\\|css"
+      :recursive t
+      :publishing-function org-publish-attachment
+      :publishing-directory "~/repos/blog/dist")
 
-         :section-numbers nil
-         :with-toc nil
-         :with-author nil
-         :with-creator nil
+     ("blog-copywriting"
+      :base-directory "~/repos/blog/src/"
+      :base-extension "org"
+      :recursive t
+      :publishing-function org-html-publish-to-html
+      :publishing-directory "~/repos/blog/dist"
 
-         :html-doctype ""
-         :html-xml-declaration ""
+      :section-numbers nil
+      :with-toc nil
+      :with-author nil
+      :with-creator nil
 
-         :html-content-class "content"
-         :html-indent t
+      :html-doctype ""
+      :html-xml-declaration ""
 
-         :html-preamble nil
-         :html-postamble nil ))))
+      :html-content-class "content"
+      :html-indent t
+
+      :html-preamble nil
+      :html-postamble nil ))))
 
 ;; org-roam
 ;; to be loaded after keybinds.el

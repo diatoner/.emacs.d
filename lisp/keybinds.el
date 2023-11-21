@@ -28,6 +28,7 @@
     "a" 'list-buffers
     "s" 'save-buffer
     "d" 'kill-buffer
+    "r" 'revert-buffer
     "b" 'switch-to-buffer)
   (octo/make-keybinder "q" "quit" octo/keybinder-toplevel)
   (octo/keybinder-quit

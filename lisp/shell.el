@@ -1,7 +1,10 @@
+(setq shell-file-name "git-bash")
 (use-package shell
   :after general
   :ensure nil
   :config
   (octo/keybinder-toplevel
-    "s" '((lambda () (interactive) (shell-command "git-bash")) :which-key "Bash here"))
+    "s" '(shell :which-key "Bash here"))
   )
+
+

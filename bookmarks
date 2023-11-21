@@ -3,8 +3,8 @@
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("org-capture-last-stored"
- (filename . "~/org/20230305151849-brake_caliper_replacement.org")
+ (filename . "~/org/20230611111029-alice.org")
  (front-context-string . "\n* tags\n** [[id:")
- (rear-context-string . "per replacement\n")
- (position . 103))
+ (rear-context-string . "\n#+title: alice\n")
+ (position . 83))
 )
